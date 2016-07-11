@@ -1,12 +1,12 @@
-$inlinecard--border-radius: 0;
-$inlinecard--border-width: 0;
-$inlinecard--border-color: #dcdcdc;
-$inlinecard--background-color: #dcdcdc;
-$inlinecard--background-color-hover: #3972c6;
-$inlinecard--padding: 20px;
-$inlinecard--color: #000;
-$inlinecard--color-hover: #fff;
-$inlinecard--box-shadow: none;
+$inlinecard--border-radius: 0 !default;
+$inlinecard--border-width: 0 !default;
+$inlinecard--border-color: #dcdcdc !default;
+$inlinecard--background-color: #dcdcdc !default;
+$inlinecard--background-color-hover: #3972c6 !default;
+$inlinecard--padding: 20px !default;
+$inlinecard--color: #000 !default;
+$inlinecard--color-hover: #fff !default;
+$inlinecard--box-shadow: none !default;
 $inlinecard--flex: (
   'direction': (
     'default': column,
@@ -19,22 +19,22 @@ $inlinecard--flex: (
     'md': center,
   ),
   'gutter': 20px,
-);
+) !default;
 
-$inlinecard-image--object-fit: contain;
-$inlinecard-image--border-width: 0;
-$inlinecard-image--border-color: #f00;
-$inlinecard-image--border-radius: 0;
-$inlinecard-image--background-color: #fff;
+$inlinecard-image--object-fit: contain !default;
+$inlinecard-image--border-width: 0 !default;
+$inlinecard-image--border-color: #f00 !default;
+$inlinecard-image--border-radius: 0 !default;
+$inlinecard-image--background-color: #fff !default;
 $inlinecard-image--width: (
   'default': auto,
   'md': 300px,
-);
+) !default;
 $inlinecard-image--padding: (
   'default': 5px,
   'md': 10px,
-);
+) !default;
 $inlinecard-image--ratio: (
   'default': 16 / 9,
   'sm': 1,
-);
+) !default;

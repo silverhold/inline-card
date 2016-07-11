@@ -1,0 +1,40 @@
+$inlinecard--border-radius: 0;
+$inlinecard--border-width: 0;
+$inlinecard--border-color: #dcdcdc;
+$inlinecard--background-color: #dcdcdc;
+$inlinecard--background-color-hover: #3972c6;
+$inlinecard--padding: 20px;
+$inlinecard--color: #000;
+$inlinecard--color-hover: #fff;
+$inlinecard--box-shadow: none;
+$inlinecard--flex: (
+  'direction': (
+    'default': column,
+    'md': row,
+  ),
+  'wrap': nowrap,
+  'grow': 0,
+  'align': (
+    'default': stretch,
+    'md': center,
+  ),
+  'gutter': 20px,
+);
+
+$inlinecard-image--object-fit: contain;
+$inlinecard-image--border-width: 0;
+$inlinecard-image--border-color: #f00;
+$inlinecard-image--border-radius: 0;
+$inlinecard-image--background-color: #fff;
+$inlinecard-image--width: (
+  'default': auto,
+  'md': 300px,
+);
+$inlinecard-image--padding: (
+  'default': 5px,
+  'md': 10px,
+);
+$inlinecard-image--ratio: (
+  'default': 16 / 9,
+  'sm': 1,
+);

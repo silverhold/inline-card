@@ -1,0 +1,141 @@
+@import 'variables';
+
+
+/**
+ * inline-card
+ * -----------
+ */
+.inline-card {
+  @include responsive-values('color', $inlinecard--color);
+  display: block;
+  overflow: hidden;
+
+  @if $inlinecard--border-radius != 0 {
+    @include responsive-values('border-radius', $inlinecard--border-radius);
+  }
+
+  @if $inlinecard--border-width != 0 {
+    @include responsive-values('border-width', $inlinecard--border-width);
+    @include responsive-values('border-color', $inlinecard--border-color);
+    border-style: solid;
+  }
+
+  @if $inlinecard--box-shadow != none {
+    @include responsive-values('box-shadow', $inlinecard--box-shadow);
+  }
+
+  @if $inlinecard--padding != 0 {
+    @include responsive-values('padding', $inlinecard--padding);
+  }
+
+  @if type-of($inlinecard--background-color) != 'list' and $inlinecard--background-color != transparent {
+    background-color: $inlinecard--background-color;
+  } @else {
+    * > & {
+      $bg-length: length($inlinecard--background-color);
+      @for $n from 1 through $bg-length {
+        &:nth-child(#{$bg-length}n + #{$n}) {
+          background-color: nth($inlinecard--background-color, $n);
+        }
+      }
+    }
+  }
+
+  &,
+  [class^="inline-card"] {
+    box-sizing: border-box;
+  }
+}
+
+// We want to qualify the element to target only hoverable elements
+// scss-lint:disable QualifyingElement
+a.inline-card {
+  text-decoration: none;
+
+  &:hover {
+    @if $inlinecard--background-color-hover != $inlinecard--background-color {
+      background-color: $inlinecard--background-color-hover;
+    }
+
+    @if $inlinecard--color-hover != $inlinecard--color {
+      @include responsive-values('color', $inlinecard--color-hover);
+    }
+  }
+}
+// scss-lint:enable QualifyingElement
+
+/**
+ * row
+ */
+.inline-card__row {
+  @include flex-container($inlinecard--flex);
+}
+
+/**
+ * col
+ */
+.inline-card__col--preview {
+  @include responsive-values('width', $inlinecard-image--width);
+  flex-shrink: 0;
+}
+
+/**
+ * preview
+ */
+.inline-card__preview {
+  @include aspect-ratio-responsive($inlinecard-image--ratio);
+  @include responsive-values('padding', $inlinecard-image--padding);
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+
+  @if $inlinecard-image--border-radius != 0 {
+    @include responsive-values('border-radius', $inlinecard-image--border-radius);
+  }
+
+  @if $inlinecard-image--border-width != 0 {
+    @include responsive-values('border-width', $inlinecard-image--border-width);
+    @include responsive-values('border-color', $inlinecard-image--border-color);
+    border-style: solid;
+  }
+
+  @if $inlinecard-image--background-color != transparent {
+    @include responsive-values('background-color', $inlinecard-image--background-color);
+  }
+}
+
+/**
+ * image
+ */
+.inline-card__image {
+  @include responsive-values('object-fit', $inlinecard-image--object-fit);
+  position: absolute;
+
+  @mixin image-size ($padding: 0) {
+    top: $padding;
+    left: $padding;
+
+    @if $padding != 0 {
+      width: calc(100% - #{$padding * 2});
+      height: calc(100% - #{$padding * 2});
+    } @else {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @if type-of($inlinecard-image--padding) == 'map' {
+    @each $tag, $padding in $inlinecard-image--padding {
+      @if $tag == 'default' {
+        @include image-size($padding);
+      } @else {
+        @include media-query($tag, 'mobile-first') {
+          @include image-size($padding);
+        }
+      }
+    }
+  } @else {
+    @include image-size($inlinecard-image--padding);
+  }
+}

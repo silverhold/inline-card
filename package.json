@@ -1,0 +1,52 @@
+{
+  "name": "trowel-inline-card",
+  "version": "0.0.0",
+  "description": "A trowel brick for the inline-card visual component",
+  "scripts": {
+    "test": "gulp test",
+    "start": "gulp test_watch",
+    "build": "gulp build",
+    "register": "bower register trowel-inline-card https://github.com/Trowel/inline-card"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowel/inline-card.git"
+  },
+  "author": "Loïc Goyet <loic@troopers.email>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trowel/inline-card/issues"
+  },
+  "files": [
+    "src/scss/inline-card.scss",
+    "src/twig/inline-card.html.twig",
+    "dest/css/inline-card.css",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "twig",
+    "html",
+    "trowel",
+    "trowel-inline-card",
+    "inline-card"
+  ],
+  "homepage": "https://github.com/Trowel/inline-card#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-twig": "^0.5.0",
+    "run-sequence": "^1.2.2"
+  }
+}

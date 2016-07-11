@@ -1,0 +1,13 @@
+{
+  "stylevendors": [
+    "@bower/trowel-inline-card/src/scss/inline-card.scss"
+  ],
+  
+  
+  "stylegui": [
+    "@bower/trowel-inline-card/gui/inline-card-gui.scss"
+  ],
+  "templategui": [
+    "@bower/trowel-inline-card/gui/inline-card-gui.html.twig"
+  ]
+}

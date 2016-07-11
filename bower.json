@@ -1,0 +1,39 @@
+{
+  "name": "trowel-inline-card",
+  "homepage": "https://github.com/Trowel/inline-card",
+  "authors": [
+    "Loïc Goyet <loic@troopers.email>"
+  ],
+  "description": "A trowel brick for the inline-card visual component",
+  "main": [
+    "src/scss/inline-card.scss",
+    "src/twig/inline-card.html.twig",
+    "dest/css/inline-card.css",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "twig",
+    "html",
+    "trowel",
+    "trowel-inline-card",
+    "inline-card"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowel/inline-card.git"
+  },
+  "dependencies": {
+    "trowel-bucket": "^1.6.0",
+    "trowel-responsive": "^1.3.0",
+    "trowel-flex": "^1.0.5"
+  }
+}

@@ -75,7 +75,6 @@ a.inline-card {
  * col
  */
 .inline-card__col--preview {
-  @include responsive-values('width', $inlinecard-image--width);
   flex-shrink: 0;
 }
 
@@ -85,6 +84,7 @@ a.inline-card {
 .inline-card__preview {
   @include aspect-ratio-responsive($inlinecard-image--ratio);
   @include responsive-values('padding', $inlinecard-image--padding);
+  @include responsive-values('width', $inlinecard-image--width);
   position: relative;
   width: 100%;
   display: block;

@@ -78,6 +78,11 @@ a.inline-card {
   flex-shrink: 0;
 }
 
+.inline-card__col--content {
+  flex-grow: 1;
+}
+
+
 /**
  * preview
  */

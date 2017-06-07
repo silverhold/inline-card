@@ -1,21 +1,21 @@
 {
-  "name": "trowel-inline-card",
+  "name": "silverhold-inline-card",
   "version": "0.0.0",
-  "description": "A trowel brick for the inline-card visual component",
+  "description": "A silverhold brick for the inline-card visual component",
   "scripts": {
     "test": "gulp test",
     "start": "gulp test_watch",
     "build": "gulp build",
-    "register": "bower register trowel-inline-card https://github.com/Trowel/inline-card"
+    "register": "bower register silverhold-inline-card https://github.com/silverhold/inline-card"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trowel/inline-card.git"
+    "url": "git+https://github.com/silverhold/inline-card.git"
   },
   "author": "Loïc Goyet <loic@troopers.email>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Trowel/inline-card/issues"
+    "url": "https://github.com/silverhold/inline-card/issues"
   },
   "files": [
     "src/scss/inline-card.scss",
@@ -28,11 +28,11 @@
     "css",
     "twig",
     "html",
-    "trowel",
-    "trowel-inline-card",
+    "silverhold",
+    "silverhold-inline-card",
     "inline-card"
   ],
-  "homepage": "https://github.com/Trowel/inline-card#readme",
+  "homepage": "https://github.com/silverhold/inline-card#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
